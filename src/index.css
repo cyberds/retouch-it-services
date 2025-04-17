@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 14 165 233;
+    --color-secondary: 99 102 241;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Smooth transitions for dark mode */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Focus styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-blue-500 text-white;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-4 border-gray-200 dark:border-gray-700 border-t-blue-500;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+/* Responsive images */
+.responsive-image {
+  @apply w-full h-auto object-cover;
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Links */
+a {
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors;
+}
+
+/* Buttons */
+button {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+}
+
+/* Lists */
+ul, ol {
+  @apply list-disc list-inside;
+}
+
+/* Tables */
+table {
+  @apply w-full border-collapse;
+}
+
+th, td {
+  @apply border border-gray-300 dark:border-gray-600 px-4 py-2;
+}
+
+th {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Code blocks */
+pre {
+  @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+/* Blockquotes */
+blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic;
+}
+
+/* Horizontal rule */
+hr {
+  @apply border-gray-200 dark:border-gray-700 my-8;
+}
