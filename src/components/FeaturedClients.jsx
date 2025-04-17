@@ -73,7 +73,7 @@ const FeaturedClients = () => {
     }
   ];
 
-  const duplicatedClients = [...clients, ...clients];
+  const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
